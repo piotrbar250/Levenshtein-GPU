@@ -79,16 +79,16 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CudaCompile Include="mainGPU.cu" />
-    <CudaCompile Include="kernel.cu" />
-    <CudaCompile Include="test.cu" />
+    <CudaCompile Include="GPU.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solutions.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mainCPU.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CPU.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
