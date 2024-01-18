@@ -2,9 +2,7 @@
   
   C:\Users\Piotr Baranowski\source\repos\Levenshtein>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\bin\nvcc.exe" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o "C:\Users\Piotr Baranowski\source\repos\Levenshtein\x64\Debug\main.cu.obj" "C:\Users\Piotr Baranowski\source\repos\Levenshtein\main.cu" 
   main.cu
-  tmpxft_00004fe0_00000000-7_main.cudafe1.cpp
-C:\Users\Piotr Baranowski\source\repos\Levenshtein\main.cu(145): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
-C:\Users\Piotr Baranowski\source\repos\Levenshtein\main.cu(146): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
-     Trwa tworzenie biblioteki C:\Users\Piotr Baranowski\source\repos\Levenshtein\x64\Debug\Levenshtein.lib i obiektu C:\Users\Piotr Baranowski\source\repos\Levenshtein\x64\Debug\Levenshtein.exp
-LINK : warning LNK4098: domyślna biblioteka "LIBCMT" powoduje konflikt z innymi bibliotekami; użyj opcji /NODEFAULTLIB:biblioteka
+  tmpxft_000015dc_00000000-7_main.cudafe1.cpp
+C:\Users\Piotr Baranowski\source\repos\Levenshtein\main.cu(126): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Piotr Baranowski\source\repos\Levenshtein\main.cu(127): warning C4267: "=": konwersja z "size_t" do "int", możliwa utrata danych
   Levenshtein.vcxproj -> C:\Users\Piotr Baranowski\source\repos\Levenshtein\x64\Debug\Levenshtein.exe
