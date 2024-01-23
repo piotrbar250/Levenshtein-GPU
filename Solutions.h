@@ -1,13 +1,22 @@
 #pragma once
 #include <string>
-#include "Utils.h"
-
-void solveGPU(std::string p, std::string t, int dp[N][M]);
+#include "Utils.cuh"
 
 int min(int a, int b, int c);
 
-void solveCPU(std::string p, std::string t, int dp[N][M]);
+int flatIndex(int row, int column, int columns);
 
-void printDp(int dp[N][N], std::string p, std::string t, int n, int m);
+void solveCPU(std::string p, std::string t, int * dp);
 
-std::stack<std::string> getTransformations(std::string p, std::string t, int dp[N][M]);
+void printDp(int* dp, std::string p, std::string t, int n, int m);
+
+void printDpOLD(int dp[N][N], std::string p, std::string t, int n, int m);
+
+void printX(int* X, std::string p, std::string t, int m);
+
+std::stack<std::string> getTransformations(std::string p, std::string t, int* dp);
+
+void testFunction(std::string p, std::string t, int* dp);
+
+
+void solveGPUnew(std::string p, std::string t, int* dp);
