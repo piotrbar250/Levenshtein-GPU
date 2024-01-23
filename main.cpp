@@ -31,28 +31,19 @@ int main(int argc, char** argv)
 	std::string p = "TACTG";
 	std::string t = "CATGACTG";
 
-	p = "AC";
-	t = "ABC";
-
-	//p = "INTENTION";
-	//t = "EXECUTION";
-
-	//p = "KITTEN";
-	//t = "SITTING";
-
-	//if (path != "")
-	//{
-	//	fstream file;
-	//	file.open(path, ios::in);
-	//	if (file.is_open())
-	//	{
-	//		std::getline(file, p);
-	//		std::getline(file, t);
-	//		file.close();
-	//	}
-	//	else
-	//		std::cout << "Unable to open file" << std::endl;
-	//}
+	if (path != "")
+	{
+		fstream file;
+		file.open(path, ios::in);
+		if (file.is_open())
+		{
+			std::getline(file, p);
+			std::getline(file, t);
+			file.close();
+		}
+		else
+			std::cout << "Unable to open file" << std::endl;
+	}
 
 	std::stack<std::string> order;
 
@@ -88,12 +79,12 @@ int main(int argc, char** argv)
 		std::cout << "GPU" << std::endl;
 		{
 			Timer timer;
-			solveGPUnew(p, t, dp);
-			//testFunction(p, t, dp);
-
-			printDp(dp, p, t, p.size(), t.size());
+			solveGPU(p, t, dp);
 			order = getTransformations(p, t, dp);
 		}
+		std::cout << std::endl;
+		printDp(dp, p, t, p.size(), t.size());
+		std::cout << std::endl;
 
 		while (!order.empty())
 		{
@@ -102,5 +93,7 @@ int main(int argc, char** argv)
 		}
 	}
 	
+	delete[] dp;
+
 	return 0;
 }
